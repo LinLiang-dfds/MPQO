@@ -16,12 +16,6 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 USE_BAO = True
 PG_CONNECTION_STR = "dbname=imdb user=linliang host=localhost"
 
-# https://stackoverflow.com/questions/312443/
-#输入一个列表和需要分割成多少块的数量，产生列表的n个这些子块
-def chunks(lst, n):
-    """Yield successive n-sized chunks from lst."""
-    for i in range(0, len(lst), n):
-        yield lst[i:i + n] 
 
 def split_train_test(data_list,train_ratio):
     np.random.seed(42)

@@ -43,8 +43,8 @@ def train_and_save_model(fn, verbose=True, emphasize_experiments=0):
     for _ in range(emphasize_experiments):
         all_experience.extend(storage.experiment_experience())
     
-    x = [i[0] for i in all_experience]
-    y = [i[1] for i in all_experience]        
+    x = [i[0] for i in all_experience]    #plan
+    y = [i[1] for i in all_experience]    #reward
     
     if not all_experience:
         raise BaoTrainingException("Cannot train a Bao model with no experience")
